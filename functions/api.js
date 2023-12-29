@@ -9,13 +9,11 @@ const PORT = 8080;
 const app = express();
 
 //Middlewares
-app.use(cors({
-    origin: '*' // Update this to the specific origin you want to allow
-  }));
+app.use(cors());
 app.use(bodyParser.json());
 
 //Routing
-app.use("/.netlify/functions/api", routes);
+app.use("/get/", routes);
 
 //Server listens
 // app.listen(PORT, () => {
