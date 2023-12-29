@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const serverless = require('serverless-http');
 const cors = require('cors');
-const routes = require('../Routes/routes');
+const routes = require('./Routes/routes');
 const PORT = 8080;
 
 //Express app init
@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 app.use("/get/", routes);
 
 //Server listens
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
-// });
-module.exports.handler = serverless(app);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

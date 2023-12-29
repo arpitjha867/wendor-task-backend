@@ -4,8 +4,7 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "start": "node api.js",
-    "build": "netlify deploy --prod",
+    "start": "node server.js",
     "client": "npm start --prefix ./client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
